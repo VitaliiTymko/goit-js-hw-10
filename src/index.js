@@ -64,7 +64,7 @@ function renderCountryInfo({ name, flags, capital, population, languages }) {
           <div class="country-List">
   <img class="country-flagInfo" src="${
     flags.svg
-  }" alt="flag" width="200" height="200"/>
+  }" alt="flag" width="200" height="150"/>
   <h2 class="country-listName">${name.official}</h2>
   <p><b> capital:</b> ${capital}</p>
   <p><b> population:</b> ${population}</p>
@@ -89,4 +89,4 @@ function renderCountryInfo({ name, flags, capital, population, languages }) {
 //     // Error handling
 //   });
 
-// responseAPI
+
