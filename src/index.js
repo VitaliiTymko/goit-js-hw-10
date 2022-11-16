@@ -30,7 +30,7 @@ function searchCoutry(event) {
 //     .then(data => console.log('name', name));
 // };
 
-function clear (){
+function clear() {
   refs.listCountry.innerHTML = '';
   refs.infoCoutry.innerHTML = '';
 }
@@ -48,24 +48,24 @@ function renderСountryList(backendResponse) {
     const renderListCountry = backendResponse
       .map(country => renderCountriesList(country))
       .join('');
-      refs.listCountry.insertAdjacentHTML('beforeend', renderListCountry);
+    refs.listCountry.insertAdjacentHTML('beforeend', renderListCountry);
   }
-};
+}
 
 function renderCountriesList({ flags, name }) {
-  return `<li class="country-listInfo">
-          <img class="country-flag" src="${flags.svg}" width="50" height="50"/>
-          <h2 class="country-listName">${name.official}</h2>
+  return `<li class="country-group">
+          <img class="country-flag" src="${flags.svg}" alt="flag" width="50" height="50"/>
+          <h2 class="country-Name">${name.official}</h2>
           </li>`;
 }
 
 function renderCountryInfo({ name, flags, capital, population, languages }) {
-  return `<li class="country-firstInfo">
-          <div class="country-infoList">
-
-  <img class="country-flagInfo" src="${flags.svg}" width="300" height="300"/>
+  return `<li class="country-one">
+          <div class="country-List">
+  <img class="country-flagInfo" src="${
+    flags.svg
+  }" alt="flag" width="200" height="200"/>
   <h2 class="country-listName">${name.official}</h2>
-
   <p><b> capital:</b> ${capital}</p>
   <p><b> population:</b> ${population}</p>
   <p><b> languages:</b> ${Object.values(languages)}</p>
